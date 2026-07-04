@@ -35,14 +35,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   http: ^1.1.0                # For making API calls to weather API
-  lottie: ^2.2.0               # For animations (sunny, rainy, cloudy, night)
+  lottie: ^2.2.0               # For weather_cond (sunny, rainy, cloudy, night)
   geolocator: ^14.0.2        # For getting current device location (latitude & longitude)
-  provider: ^6.1.4
   geocoding: ^2.1.0
   visibility_detector: ^0.4.0+2
   intl: ^0.19.0
   flutter_launcher_icons: ^0.14.0
   flutter_native_splash: ^2.4.0
+  flutter_riverpod: ^2.5.0
+  ntp: ^2.0.0
+  url_launcher: ^6.3.2
+
 
 dev_dependencies:
   flutter_test:
@@ -68,19 +71,30 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.png
-  #   - images/a_dot_ham.jpeg
+    - assets/icons/
+    - assets/images/
+    - assets/
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/logo.png"
+  image_path: "assets/icons/icon.png"
+  icon_background_color: "#000000"
 
 flutter_native_splash:
-  color: "#ffffff"
-  image: assets/logo.png
+  color: "#FFFFFF"   # or any color you want
+  image: "assets/icons/splash.png"
   android: true
   ios: true
-  android_gravity: fill
+  android_gravity: center   # top / bottom / center
+  ios_content_mode: center  # scaleAspectFit style
+
+  android_12:
+    color: "#FFFFFF"
+    image: "assets/icons/splash.png"
+    icon_background_color: "#FFFFFF"
+    android_gravity: center   # top / bottom / center
+    ios_content_mode: center  # scaleAspectFit style
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

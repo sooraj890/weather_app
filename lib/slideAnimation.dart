@@ -20,12 +20,14 @@ class _SlideInWidgetState extends State<SlideInWidget>
   void initState() {
     super.initState();
 
-    _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 800));
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 800),
+    );
 
     _animation = Tween<Offset>(
-      begin: Offset(-1.0, 0), // start off-screen left
-      end: Offset(0, 0),      // final position
+      begin: Offset(-1.0, 0),
+      end: Offset(0, 0),
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
   }
 
@@ -38,7 +40,7 @@ class _SlideInWidgetState extends State<SlideInWidget>
   void _startAnimation() {
     if (!hasAnimated) {
       _controller.forward();
-      hasAnimated = true; // ensures it only animates once
+      hasAnimated = true;
     }
   }
 
@@ -51,10 +53,7 @@ class _SlideInWidgetState extends State<SlideInWidget>
           _startAnimation();
         }
       },
-      child: SlideTransition(
-        position: _animation,
-        child: widget.child,
-      ),
+      child: SlideTransition(position: _animation, child: widget.child),
     );
   }
 }

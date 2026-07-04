@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: NightView(),
-  ));
-}
-
 class NightView extends StatefulWidget {
   @override
   State<NightView> createState() => _NightViewState();
@@ -15,7 +8,6 @@ class NightView extends StatefulWidget {
 
 class _NightViewState extends State<NightView>
     with SingleTickerProviderStateMixin {
-
   late AnimationController _controller;
 
   @override
@@ -40,14 +32,11 @@ class _NightViewState extends State<NightView>
       width: double.infinity,
       child: Stack(
         children: [
-          /// 🌙 Moon
           Positioned(
             top: 100,
             right: 100,
-            child: Icon(Icons.nights_stay_rounded,size: 50,)
+            child: Icon(Icons.nights_stay_rounded, size: 50),
           ),
-
-          /// ⭐ Twinkling Stars
           ...List.generate(1, (index) {
             return AnimatedBuilder(
               animation: _controller,
@@ -57,11 +46,7 @@ class _NightViewState extends State<NightView>
                   left: Random().nextDouble() * 500,
                   child: Opacity(
                     opacity: _controller.value,
-                    child: Icon(
-                      Icons.star,
-                      color: Colors.white,
-                      size: 5,
-                    ),
+                    child: Icon(Icons.star, color: Colors.white, size: 5),
                   ),
                 );
               },

@@ -1,16 +1,18 @@
 # weather_app
 
-A new Flutter project.
+Updated Flutter project.
 
-## Getting Started
+This is the new look of my weather app in which I have updated:
 
-This project is a starting point for a Flutter application.
+- Flutter web support,
+- Responsive UI,
+- Firebase hosting deployment,
+- Fast loading performance.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[Mobile app download](https://docs.flutter.dev/get-started/codelab)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Web view](https://weatherapp-b286a.web.app/)
+
+[My Portfolio](https://myportfolio-42c25.web.app/)
+
