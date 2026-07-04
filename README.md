@@ -10,7 +10,7 @@ This is the new look of my weather app in which I have updated:
 - Fast loading performance.
 
 
-[Mobile app download](https://docs.flutter.dev/get-started/codelab)
+[Mobile app download](https://github.com/sooraj890/weather_app/releases/tag/v1.1.0)
 
 [Web view](https://weatherapp-b286a.web.app/)
 
